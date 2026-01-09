@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>WhatsApp Reminder App</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 30px;
+            background: #f4f4f4;
+        }
+        .container {
+            max-width: 450px;
+            background: #fff;
+            padding: 25px;
+            margin: auto;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px #ccc;
+        }
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        label {
+            font-weight: bold;
+        }
+        input, textarea, button {
+            width: 100%;
+            padding: 10px;
+            margin-top: 6px;
+            margin-bottom: 15px;
+            border-radius: 5px;
+            border: 1px solid #aaa;
+            font-size: 15px;
+        }
+        button {
+            background: #0b8c4c;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 17px;
+        }
+        button:hover {
+            background: #046f39;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h2>📅 WhatsApp Reminder Scheduler</h2>
+
+        <form action="/add-client" method="POST">
+
+            <label>Name:</label>
+            <input type="text" name="name" required>
+
+            <label>Phone (With Country Code):</label>
+            <input type="text" name="phone" placeholder="919876543210" required>
+
+            <label>Date:</label>
+            <input type="date" name="date" required>
+
+            <label>Time:</label>
+            <input type="time" name="time" required>
+
+            <label>Message:</label>
+            <textarea name="message" rows="4" placeholder="Enter reminder message..." required></textarea>
+
+            <button type="submit">Set Reminder</button>
+        </form>
+    </div>
+</body>
+</html>
